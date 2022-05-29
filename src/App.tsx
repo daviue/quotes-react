@@ -108,7 +108,7 @@ const App = (): JSX.Element => {
 
 	useEffect((): void => {
 		axios
-			.get('https://run.mocky.io/v3/c2001ed8-c3c6-443b-920c-de0bc8f3f0e8')
+			.get('https://run.mocky.io/v3/c57b000f-838d-4ec7-a4b0-34f99c702035')
 			.then(res => {
 				setQuoteList(res.data);
 			})
@@ -125,7 +125,7 @@ const App = (): JSX.Element => {
 	};
 
 	const tweetQuote = (): void => {
-		const twitterURL = `https://twitter.com/intent/tweet?text=${quote.text}%0d~${quote.author}`;
+		const twitterURL = `https://twitter.com/intent/tweet?text="${quote.text}"%0d%0d~${quote.author}`;
 		window.open(twitterURL, '_blank');
 	};
 
